@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -u 13-unique 
+sort -u 13-unique | cat
