@@ -1,2 +1,0 @@
-#!/bin/bash
-tr < input "cC" -d
