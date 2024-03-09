@@ -3,9 +3,7 @@
 # set the file group
 # content = 'I love Puppet'
 
-$file_path = /tmp/school
-
-file {$file_path:
+file {'/tmp/school':
 
     ensure => present;
     mode => '0744',
