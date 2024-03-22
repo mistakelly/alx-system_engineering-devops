@@ -1,1 +1,1 @@
-## mysql sysadmin
+## working with mysql (sysadmin)
