@@ -4,3 +4,4 @@ in this repo we will be discussing everything on how to configure mysql datataba
 
 from creating users, giving user privilages and configuring database.
 
+as a sys admin you have to be able to do all of thi
