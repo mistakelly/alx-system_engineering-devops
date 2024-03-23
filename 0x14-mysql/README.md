@@ -4,4 +4,3 @@ in this repo we will be discussing everything on how to configure mysql datataba
 
 from creating users, giving user privilages and configuring database.
 
-in this repo we will be discussing everything theres to know bout mysql
