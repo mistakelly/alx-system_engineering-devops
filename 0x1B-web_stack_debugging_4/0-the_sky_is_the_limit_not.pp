@@ -1,18 +1,9 @@
-# Puppet manifest to optimize Nginx configuration for handling load
+# Increases the number of requests that nginx can handle.
+# by increasing maximum open files limit for the nginx user.
 
-class nginx_config {
-    file { '/etc/nginx/nginx.conf':
-        ensure  => file,
-        owner   => 'root',
-        group   => 'root',
-        mode    => '0644',
-        content => template('nginx/nginx.conf.erb'),
-        notify  => Service['nginx'],
-    }
-}
+exec { 'set_ulimit_to 5000':
+  command => '/bin/sed -i "s/ULIMIT.*/ULIMIT=\"-n 5000\"/" /etc/default/nginx'
 
-service { 'nginx':
-    ensure  => running,
-    enable  => true,
-    require => Class['nginx_config'],
+} -> exec { 'restart nginx':
+  command => '/usr/sbin/service nginx restart',
 }
