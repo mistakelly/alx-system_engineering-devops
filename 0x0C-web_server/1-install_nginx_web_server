@@ -2,11 +2,11 @@
 # Requirements:
 #install nginx on your webserver, configure nginx to run on port 80.
 
-sudo apt update
-sudo apt install ngnix
+apt update
+apt install ngnix
 
 ufw allow 'Nginx HTTP'
-echo "Hello World" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
 service nginx start
 
 
